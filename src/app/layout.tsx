@@ -20,10 +20,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+  const navBarHeight: number = 3.5;
+  
   return (
     <html lang="en">
       <body
-        className={poppins.variable}
+        style={{ "--navbar-height": `${navBarHeight}rem` } as React.CSSProperties}
+        className={`${poppins.variable} text-gray-50 bg-neutral-950`}
       >
         <Navbar />
         {children}

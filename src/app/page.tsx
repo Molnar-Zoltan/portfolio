@@ -7,7 +7,7 @@ import Contact from "@/components/sections/Contact/Contact";
 
 export default function Page() {
   return (
-    <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start mt-[var(--navbar-height)]">
       <Home />
       <About />
       <Skills />
