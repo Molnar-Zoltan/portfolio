@@ -1,31 +1,37 @@
 
+import * as React from "react"
+
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
+
 export default function Projects() {
     return (
-        <section id="projects">
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
-            <br/>projects
+        <section id="projects" className="w-full flex flex-col items-center gap-4 min-h-[85vh]">
+            <h1>Projects</h1>
+            <Carousel className="w-full max-w-xs flex">
+                <CarouselContent>
+                    {Array.from({ length: 5 }).map((_, index) => (
+                    <CarouselItem key={index}>
+                        <div className="p-1">
+                        <Card>
+                            <CardContent className="flex aspect-square items-center justify-center p-6">
+                            <span className="text-4xl font-semibold">{index + 1}</span>
+                            </CardContent>
+                        </Card>
+                        </div>
+                    </CarouselItem>
+                    ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+            </Carousel>
         </section>
     );
 }
