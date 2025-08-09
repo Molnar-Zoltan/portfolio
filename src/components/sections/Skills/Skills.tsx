@@ -1,6 +1,9 @@
-import * as React from "react"
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
+import * as React from "react"
+import { skills } from "@/data/skills";
+import SkillsCard from "./SkillsCard";
+
 import {
   Carousel,
   CarouselContent,
@@ -9,35 +12,79 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 
 
 export default function Skills() {
+
     return (
         <section id="skills" className="w-full flex flex-col items-center gap-4 min-h-[85vh]">
             <h1>Skills</h1>
 
-            <Carousel
-                opts={{
-                    align: "start",
-                }}
-                className="w-full max-w-sm"
-            >
-                <CarouselContent>
-                    {Array.from({ length: 5 }).map((_, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                        <div className="p-1">
-                        <Card>
-                            <CardContent className="flex aspect-square items-center justify-center p-6">
-                            <span className="text-3xl font-semibold">{index + 1}</span>
-                            </CardContent>
-                        </Card>
-                        </div>
-                    </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-            </Carousel>
+                {skills.map((category) => (
+                <div
+                    key={category.category}
+                    className="w-full flex flex-col items-center gap-4"
+                >
+                    <h2>{category.category}</h2>
+                    <Carousel
+                        opts={{ align: "start" }}
+                        className="w-full max-w-60 md:max-w-xl select-none"
+                        >
+                        <CarouselContent className="-ml-2">
+                            {category.skills.map((skill, index) => (
+                                <CarouselItem
+                                    key={index}
+                                    className="basis-1/2 md:basis-1/4 pl-2"
+                                >
+                                    <div className="hidden md:block">
+
+                                        <Tooltip>
+                                            <TooltipTrigger asChild>
+                                                <div className="p-1">
+                                                    <SkillsCard skill={skill} />
+                                                </div>
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                <p className="text-xl">{skill.name}</p>
+                                            </TooltipContent>
+                                        </Tooltip>
+                                    
+                                    </div>
+
+                                    <div className="block md:hidden">
+
+                                        <Popover>
+                                            <PopoverTrigger asChild>
+                                                <div className="p-1">
+                                                    <SkillsCard skill={skill} />
+                                                </div>
+                                            </PopoverTrigger>
+                                            <PopoverContent className="block md:hidden max-w-30 bg-neutral-800">
+                                                <p className="text-md text-center text-gray-50">{skill.name}</p>
+                                            </PopoverContent>
+                                        </Popover>
+                                    
+                                    </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
+                </div>
+                ))}
+
         </section>
     );
 }
