@@ -16,6 +16,14 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Zoltán Molnár - Portfolio",
   description: "This is my portfolio website showcasing my skills and projects.",
+  authors: [{ name: "Zoltán Molnár" }],
+  openGraph: {
+    title: "Zoltán Molnár's Portfolio",
+    description: "This is my portfolio website showcasing my skills and projects.",
+    url: "https://portfolio.zoltanmolnar.eu/",
+    siteName: "Zoltán Molnár's Portfolio",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
