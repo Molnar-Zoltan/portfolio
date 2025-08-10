@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Poppins } from 'next/font/google'
 import "../styles/globals.css";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
+import NavbarMobile from "@/components/NavbarMobile/NavbarMobile";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next"
+
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -31,6 +33,7 @@ export default function RootLayout({
         className={`${poppins.variable} text-gray-50 bg-neutral-950`}
       >
         <Navbar />
+        <NavbarMobile />
         {children}
         <Footer />
         <Analytics />
