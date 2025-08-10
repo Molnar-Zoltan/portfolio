@@ -5,8 +5,12 @@ import {
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 
-const email: string = "test@testmail.com";
-const iconSize: string = "h-7 w-7";
+import ContactLink from "./ContactLink";
+
+const email: string = process.env.email || "test@testmail.com";
+const linkedin: string = process.env.linkedin || "https://www.linkedin.com/";
+const github: string = process.env.github || "https://github.com/";
+const iconSize: string = "h-7.5 w-7.5";
 
 export default function Contact() {
     return (
@@ -18,8 +22,8 @@ export default function Contact() {
                     <span className="font-semibold">Email:</span> {email}
                 </p>
                 <div className="flex justify-between">
-                    <FaLinkedin className={iconSize} />
-                    <FaGithub className={iconSize} />
+                    <ContactLink Icon={FaLinkedin} link={linkedin} title="LinkedIn" iconSize={iconSize} />
+                    <ContactLink Icon={FaGithub} link={github} title="GitHub" iconSize={iconSize} />
                 </div>
             </Card>
         </section>

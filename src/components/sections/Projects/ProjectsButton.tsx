@@ -1,5 +1,4 @@
 
-import { FaGithub } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { IconType } from "react-icons";
 
