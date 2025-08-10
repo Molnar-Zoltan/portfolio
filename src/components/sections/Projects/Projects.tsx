@@ -1,6 +1,9 @@
 
 import * as React from "react"
 
+import { projects } from "@/data/projects";
+import Image from "next/image";
+
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -10,23 +13,53 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
+import { FaGithub } from "react-icons/fa6";
+import { CiGlobe } from "react-icons/ci";
+
+
+import ProjectsButton from "./ProjectsButton";
+
 
 export default function Projects() {
+    
     return (
         <section id="projects" className="w-full flex flex-col items-center gap-4 min-h-[85vh]">
             <h1>Projects</h1>
-            <Carousel className="w-full max-w-xs flex">
+            <Carousel className="max-w-[15rem] md:max-w-[23rem] flex">
                 <CarouselContent>
-                    {Array.from({ length: 5 }).map((_, index) => (
-                    <CarouselItem key={index}>
-                        <div className="p-1">
-                        <Card>
-                            <CardContent className="flex aspect-square items-center justify-center p-6">
-                            <span className="text-4xl font-semibold">{index + 1}</span>
-                            </CardContent>
-                        </Card>
-                        </div>
-                    </CarouselItem>
+                    {projects.map((project, index) => (
+                        <CarouselItem key={index}>
+                            <div className="py-2">
+                                <Card>
+                                    <CardContent className="flex flex-col items-center justify-center gap-4">
+                                        <div className="flex items-center">
+                                            <Image
+                                            src={project.image}
+                                            alt={project.name}
+                                            width={300}
+                                            height={200}
+                                            className="w-full h-40 md:h-80 object-cover rounded-md "
+                                        />
+                                        </div>
+                                        <h2 className="text-lg font-semibold text-center">{project.name}</h2>
+                                        <div className="w-full flex justify-between mt-2">
+  
+                                                <ProjectsButton
+                                                    Icon={FaGithub}
+                                                    link={project.githubLink}
+                                                    title="GitHub"
+                                                />
+                                                <ProjectsButton
+                                                    Icon={CiGlobe}
+                                                    link={project.liveLink}
+                                                    title="Live Demo"
+                                                />
+                              
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </CarouselItem>
                     ))}
                 </CarouselContent>
                 <CarouselPrevious />
