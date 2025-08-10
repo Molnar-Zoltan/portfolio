@@ -6,10 +6,12 @@ import {
 } from "@/components/ui/accordion"
 
 export default function About() {
+
     const accordionItemStyles: string = "lg:w-[50rem] sm:w-[25rem] w-[15rem] flex flex-col items-center";
     const accordionContentStyles: string = "flex flex-col gap-4 text-center";
+
     return (
-        <section id="about" className="w-full flex flex-col items-center gap-4 min-h-[85vh]">
+        <section id="about" className="w-full flex flex-col items-center justify-center gap-20 min-h-[90vh]">
             <h1>About</h1>
 
             <Accordion
@@ -22,10 +24,7 @@ export default function About() {
                     <AccordionTrigger>Introduction</AccordionTrigger>
                     <AccordionContent className={accordionContentStyles}>
                         <p>
-                            Test
-                        </p>
-                        <p>
-                            Test
+                            I&apos;m Zoltán Molnár, a developer focused mostly on front-end, currently building skills to grow as a Full-Stack Developer.
                         </p>
                     </AccordionContent>
                 </AccordionItem>
@@ -33,43 +32,38 @@ export default function About() {
                     <AccordionTrigger>Education</AccordionTrigger>
                     <AccordionContent className={accordionContentStyles}>
                         <p>
-                            Test
-                        </p>
-                        <p>
-                            Test
+                            I graduated from John von Neumann University in Kecskemét back in 2019, where I studied Computer Science (BSc), specializing in mobile development.
                         </p>
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3" className={accordionItemStyles}>
                     <AccordionTrigger>Certifications</AccordionTrigger>
                     <AccordionContent className={accordionContentStyles}>
-                        <p>
-                            Test
-                        </p>
-                        <p>
-                            Test
-                        </p>
+                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/2F08KTWPRR7K">
+                            <p className="flex flex-col">
+                                <span className="font-semibold">Meta Front-End Developer Professional Certificate</span>
+                                <span className="italic">Issued by Meta on Coursera — May 2025</span>
+                            </p>
+                        </a>
+                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/VYPADOQE9I33">
+                            <p className="flex flex-col">
+                                <span className="font-semibold">IBM Back-End JavaScript Developer Professional Certificate </span>
+                                <span className="italic">Issued by IBM on Coursera — June 2025 </span>
+                            </p>
+                        </a>
+                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/AIBFH43DRH7M">
+                            <p className="flex flex-col">
+                                <span className="font-semibold">IBM Full-Stack JavaScript Developer Professional Certificate </span>
+                                <span className="italic">Issued by IBM on Coursera — June 2025 </span>
+                            </p>
+                        </a>
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4" className={accordionItemStyles}>
-                    <AccordionTrigger>Experience</AccordionTrigger>
-                    <AccordionContent className={accordionContentStyles}>
-                        <p>
-                            Test
-                        </p>
-                        <p>
-                            Test
-                        </p>
-                    </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-5" className={accordionItemStyles}>
                     <AccordionTrigger>Hobbies</AccordionTrigger>
                     <AccordionContent className={accordionContentStyles}>
                         <p>
-                            Test
-                        </p>
-                        <p>
-                            Test
+                            In my spare time, I enjoy playing video games and experimenting with new coding projects. 
                         </p>
                     </AccordionContent> 
                 </AccordionItem>

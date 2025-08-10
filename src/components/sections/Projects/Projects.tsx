@@ -23,7 +23,7 @@ import ProjectsButton from "./ProjectsButton";
 export default function Projects() {
     
     return (
-        <section id="projects" className="w-full flex flex-col items-center gap-4 min-h-[85vh]">
+        <section id="projects" className="w-full flex flex-col justify-center items-center gap-20 min-h-[90vh]">
             <h1>Projects</h1>
             <Carousel className="max-w-[15rem] md:max-w-[23rem] flex">
                 <CarouselContent>
