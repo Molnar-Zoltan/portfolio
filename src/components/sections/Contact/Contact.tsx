@@ -17,8 +17,8 @@ export default function Contact() {
 
 
     return (
-        <section id="contact" className="w-full flex flex-col justify-center items-center min-h-[85vh] gap-20">
-            <h1>Contact</h1>
+        <section id="contact" className="w-full flex flex-col justify-center items-center min-h-[90vh] gap-20">
+            <h2>Contact</h2>
             <Card className="h-70 md:h-80 w-70 md:w-100 px-7 flex justify-between">
                 <p className="text-center text-lg font-semibold">Get in Touch</p>
                 <p className="text-center flex gap-1 justify-center items-center flex-col md:flex-row">

@@ -24,7 +24,7 @@ export default function Projects() {
     
     return (
         <section id="projects" className="w-full flex flex-col justify-center items-center gap-20 min-h-[90vh]">
-            <h1>Projects</h1>
+            <h2>Projects</h2>
             <Carousel className="max-w-[15rem] md:max-w-[23rem] flex">
                 <CarouselContent>
                     {projects.map((project, index) => (
@@ -41,7 +41,7 @@ export default function Projects() {
                                             className="w-full h-40 md:h-80 object-cover rounded-md "
                                         />
                                         </div>
-                                        <h2 className="text-lg font-semibold text-center">{project.name}</h2>
+                                        <h3 className="text-lg font-semibold text-center">{project.name}</h3>
                                         <div className="w-full flex justify-between mt-2">
   
                                                 <ProjectsButton

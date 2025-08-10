@@ -29,14 +29,14 @@ export default function Skills() {
 
     return (
         <section id="skills" className="w-full flex flex-col items-center justify-center gap-10 min-h-[90vh]">
-            <h1 className="pb-20">Skills</h1>
+            <h2 className="pb-10">Skills</h2>
 
             {skills.map((category) => (
             <div
                 key={category.category}
                 className="w-full flex flex-col items-center gap-4"
             >
-                <h2>{category.category}</h2>
+                <h3 className="text-xl">{category.category}</h3>
                 <Carousel
                     opts={{ align: "start" }}
                     className="w-full max-w-60 md:max-w-xl select-none"

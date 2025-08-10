@@ -12,7 +12,7 @@ export default function About() {
 
     return (
         <section id="about" className="w-full flex flex-col items-center justify-center gap-20 min-h-[90vh]">
-            <h1>About</h1>
+            <h2>About</h2>
 
             <Accordion
                 type="single"
