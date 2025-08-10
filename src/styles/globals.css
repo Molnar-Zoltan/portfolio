@@ -141,3 +141,8 @@ body {
 button:hover {
   cursor: pointer;
 }
+
+footer {
+  background: var(--card);
+  border-top: 0.1rem solid var(--primary-foreground);
+}
