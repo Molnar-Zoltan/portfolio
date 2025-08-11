@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         style={{ "--navbar-height": `${navBarHeight}rem` } as React.CSSProperties}
-        className={`${poppins.variable} text-gray-50 bg-neutral-950`}
+        className={`${poppins.variable} text-gray-50 bg-neutral-950 select-none`}
       >
         <Navbar />
         <NavbarMobile />

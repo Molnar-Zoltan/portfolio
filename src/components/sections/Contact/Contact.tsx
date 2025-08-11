@@ -21,7 +21,7 @@ export default function Contact() {
             <h2>Contact</h2>
             <Card className="h-70 md:h-80 w-70 md:w-100 px-7 flex justify-between">
                 <p className="text-center text-lg font-semibold">Get in Touch</p>
-                <p className="text-center flex gap-1 justify-center items-center flex-col md:flex-row">
+                <p className="text-center flex gap-1 justify-center items-center flex-col md:flex-row select-text">
                     <span className="font-semibold">Email:</span>
                     <ContactDialog email={email} />
                 </p>

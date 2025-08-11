@@ -39,7 +39,7 @@ export default function Skills() {
                 <h3 className="text-xl">{category.category}</h3>
                 <Carousel
                     opts={{ align: "start" }}
-                    className="w-full max-w-60 md:max-w-xl select-none"
+                    className="w-full max-w-60 md:max-w-xl"
                     >
                     <CarouselContent className="-ml-2">
                         {category.skills.map((skill, index) => (
