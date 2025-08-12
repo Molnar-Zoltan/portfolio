@@ -34,11 +34,13 @@ export const skills: SkillCategory[] = [
     {
         category: "Other",
         skills: [
-            { name: "Git", image: "/images/icons/git.svg" },
-            { name: "GitHub", image: "/images/icons/github.svg" },
+            { name: "C#", image: "/images/icons/c-sharp.svg" },
+            { name: "Postman", image: "/images/icons/postman.svg" },
             { name: "Vite", image: "/images/icons/vite.svg" },
             { name: "Vitest", image: "/images/icons/vitest.svg" },
             { name: "Jest", image: "/images/icons/jest.svg" },
+            { name: "Git", image: "/images/icons/git.svg" },
+            { name: "GitHub", image: "/images/icons/github.svg" },
         ],
     },
 ];
