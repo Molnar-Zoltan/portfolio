@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 
 import Home from "@/components/sections/Home/Home";
 import About from "@/components/sections/About/About";

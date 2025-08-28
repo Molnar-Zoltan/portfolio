@@ -5,6 +5,8 @@ import { FaGithub } from "react-icons/fa6";
 import ContactLink from "./ContactLink";
 import ContactDialog from "./ContactDialog";
 
+import AnimatedSection from "@/components/ui/AnimatedSection";
+import { sectionAnimation } from "@/lib/animations";
 
 
 export default function Contact() {
@@ -17,7 +19,7 @@ export default function Contact() {
 
 
     return (
-        <section id="contact" className="w-full flex flex-col justify-center items-center min-h-[90vh] gap-20">
+        <AnimatedSection  {...sectionAnimation} id="contact" className="w-full flex flex-col justify-center items-center min-h-[90vh] gap-20">
             <h2>Contact</h2>
             <Card className="h-70 md:h-80 w-70 md:w-100 px-7 flex justify-between">
                 <p className="text-center text-lg font-semibold">Get in Touch</p>
@@ -30,6 +32,6 @@ export default function Contact() {
                     <ContactLink Icon={FaGithub} link={github} title="GitHub" iconSize={iconSize} />
                 </div>
             </Card>
-        </section>
+        </AnimatedSection>
     );
 }

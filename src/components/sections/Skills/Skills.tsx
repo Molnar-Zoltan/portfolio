@@ -24,11 +24,14 @@ import {
   PopoverContent,
 } from "@/components/ui/popover";
 
+import AnimatedSection from "@/components/ui/AnimatedSection";
+import { sectionAnimation } from "@/lib/animations";
+
 
 export default function Skills() {
 
     return (
-        <section id="skills" className="w-full flex flex-col items-center justify-center gap-10 min-h-[90vh]">
+        <AnimatedSection  {...sectionAnimation} id="skills" className="w-full flex flex-col items-center justify-center gap-10 min-h-[90vh]">
             <h2 className="pb-10">Skills</h2>
 
             {skills.map((category) => (
@@ -85,6 +88,6 @@ export default function Skills() {
             </div>
             ))}
 
-        </section>
+        </AnimatedSection>
     );
 }

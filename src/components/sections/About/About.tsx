@@ -5,6 +5,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
+import AnimatedSection from "@/components/ui/AnimatedSection";
+import { sectionAnimation } from "@/lib/animations";
+
 export default function About() {
 
     const accordionItemStyles: string = "lg:w-[50rem] sm:w-[25rem] w-[15rem] flex flex-col items-center";
@@ -12,7 +15,7 @@ export default function About() {
     const accordionTriggerStyle: string = "text-[1.1rem] font-semibold";
 
     return (
-        <section id="about" className="w-full flex flex-col items-center justify-center gap-20 min-h-[90vh]">
+        <AnimatedSection  {...sectionAnimation} id="about" className="w-full flex flex-col items-center justify-center gap-20 min-h-[90vh]">
 
             <h2>About</h2>
 
@@ -71,6 +74,6 @@ export default function About() {
                 </AccordionItem>
             </Accordion>
 
-        </section>
+        </AnimatedSection>
     );
 }

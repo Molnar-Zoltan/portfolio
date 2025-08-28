@@ -16,14 +16,16 @@ import {
 import { FaGithub } from "react-icons/fa6";
 import { CiGlobe } from "react-icons/ci";
 
-
 import ProjectsButton from "./ProjectsButton";
+
+import AnimatedSection from "@/components/ui/AnimatedSection";
+import { sectionAnimation } from "@/lib/animations";
 
 
 export default function Projects() {
     
     return (
-        <section id="projects" className="w-full flex flex-col justify-center items-center gap-20 min-h-[90vh]">
+        <AnimatedSection  {...sectionAnimation} id="projects" className="w-full flex flex-col justify-center items-center gap-20 min-h-[90vh]">
             <h2>Projects</h2>
             <Carousel className="max-w-[15rem] md:max-w-[23rem] flex">
                 <CarouselContent>
@@ -65,6 +67,6 @@ export default function Projects() {
                 <CarouselPrevious />
                 <CarouselNext />
             </Carousel>
-        </section>
+        </AnimatedSection>
     );
 }
