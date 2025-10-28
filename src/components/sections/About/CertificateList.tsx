@@ -6,7 +6,7 @@ export default function CertifiacteList() {
 
     return (
         certificates.map((certificate, index) => (
-            <a href={certificate.href} key={index}>
+            <a href={certificate.href} key={index} target="_blank" rel="noopener noreferrer">
                 <p className="flex flex-col">
                     <span className="font-semibold">{certificate.name}</span>
                     <span className="italic">Issued by {certificate.issuedBy} on {certificate.platform} —{' '}
