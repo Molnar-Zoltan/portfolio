@@ -7,6 +7,7 @@ import {
 
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { sectionAnimation } from "@/lib/animations";
+import CertifiacteList from "./CertificateList";
 
 export default function About() {
 
@@ -44,24 +45,7 @@ export default function About() {
                 <AccordionItem value="item-3" className={accordionItemStyles}>
                     <AccordionTrigger className={accordionTriggerStyle}>Certifications</AccordionTrigger>
                     <AccordionContent className={accordionContentStyles}>
-                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/2F08KTWPRR7K">
-                            <p className="flex flex-col">
-                                <span className="font-semibold">Meta Front-End Developer Professional Certificate</span>
-                                <span className="italic">Issued by Meta on Coursera — May 2025</span>
-                            </p>
-                        </a>
-                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/VYPADOQE9I33">
-                            <p className="flex flex-col">
-                                <span className="font-semibold">IBM Back-End JavaScript Developer Professional Certificate </span>
-                                <span className="italic">Issued by IBM on Coursera — June 2025 </span>
-                            </p>
-                        </a>
-                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/AIBFH43DRH7M">
-                            <p className="flex flex-col">
-                                <span className="font-semibold">IBM Full-Stack JavaScript Developer Professional Certificate </span>
-                                <span className="italic">Issued by IBM on Coursera — June 2025 </span>
-                            </p>
-                        </a>
+                        <CertifiacteList />
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4" className={accordionItemStyles}>
