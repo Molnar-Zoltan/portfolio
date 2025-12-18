@@ -33,7 +33,7 @@ export default function Projects() {
                         <CarouselItem key={index}>
                             <div className="py-2">
                                 <Card>
-                                    <CardContent className="flex flex-col items-center justify-center gap-4">
+                                    <CardContent className="flex flex-col items-center justify-center gap-2">
                                         <div className="flex items-center">
                                             <Image
                                             src={project.image}
@@ -43,8 +43,9 @@ export default function Projects() {
                                             className="w-full h-40 md:h-80 object-cover rounded-md "
                                         />
                                         </div>
-                                        <h3 className="text-lg font-semibold text-center">{project.name}</h3>
-                                        <div className="w-full flex justify-between mt-2">
+                                        <h3 className="text-lg font-semibold text-center mt-2">{project.name}</h3>
+                                        <h4 className="text-base text-center">{project.stack}</h4>
+                                        <div className="w-full flex justify-between mt-4">
   
                                                 <ProjectsButton
                                                     Icon={FaGithub}
