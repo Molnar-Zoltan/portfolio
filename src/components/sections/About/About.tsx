@@ -38,7 +38,7 @@ export default function About() {
                     <AccordionTrigger className={accordionTriggerStyle}>Education</AccordionTrigger>
                     <AccordionContent className={accordionContentStyles}>
                         <p>
-                            I graduated from John von Neumann University in Kecskemét back in 2019, where I studied Computer Science (BSc), specializing in mobile development.
+                            I graduated from John von Neumann University in Kecskemét back in 2019, where I studied Computer Science (BSc), specializing in mobile application development.
                         </p>
                     </AccordionContent>
                 </AccordionItem>
