@@ -1,12 +1,4 @@
-interface Skill {
-  name: string;
-  image: string;
-}
-
-interface SkillCategory {
-  category: string;
-  skills: Skill[];
-}
+import type { SkillCategory } from "@/types/skills";
 
 export const skills: SkillCategory[] = [
     {
@@ -44,3 +36,5 @@ export const skills: SkillCategory[] = [
         ],
     },
 ];
+
+export const skillsHeading = "Skills";

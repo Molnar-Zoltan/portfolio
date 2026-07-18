@@ -6,9 +6,7 @@ import { menuItems } from "@/data/menuItems";
 import HamburgerButton from "./HamburgerButton";
 
 
-
 export default function NavbarMobile() {
-
     const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
     return (

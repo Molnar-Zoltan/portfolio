@@ -1,5 +1,6 @@
 import { certificates } from "@/data/certificates";
 
+
 export default function CertifiacteList() {
 
     certificates.sort((a, b) => b.date.getTime() - a.date.getTime());

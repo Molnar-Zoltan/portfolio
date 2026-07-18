@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button"
 import { menuItems } from "@/data/menuItems";
 
 
-
 export default function Navbar() {
     return (
         <nav 

@@ -1,10 +1,4 @@
-export interface Project {
-    name: string;
-    stack: string;
-    image: string;
-    githubLink: string;
-    liveLink: string;
-}
+import type { Project } from "@/types/projects";
 
 export const projects: Project[] = [
     { 
@@ -43,3 +37,5 @@ export const projects: Project[] = [
         liveLink: "https://molnar-zoltan.github.io/currency-converter/" 
     },
 ];
+
+export const projectsHeading = "Projects";

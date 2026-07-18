@@ -1,12 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { IconType } from "react-icons";
+import type { ProjectButton } from "@/types/projects";
 
-type ProjectButton = {
-    Icon: IconType;
-    link: string;
-    title: string;
-};
 
 export default function ProjectsButton({ Icon, link, title }: ProjectButton) {
     return (

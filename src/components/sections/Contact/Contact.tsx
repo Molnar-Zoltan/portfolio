@@ -17,7 +17,6 @@ export default function Contact() {
     const iconSize: string = "h-7.5 w-7.5";
 
 
-
     return (
         <AnimatedSection  {...sectionAnimation} id="contact" className="w-full flex flex-col justify-center items-center min-h-[90vh] gap-20">
             <h2>Contact</h2>

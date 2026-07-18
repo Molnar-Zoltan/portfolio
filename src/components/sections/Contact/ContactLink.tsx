@@ -1,11 +1,5 @@
-import { IconType } from "react-icons";
+import type { ContactLinkProps } from "@/types/contact";
 
-type ContactLinkProps = {
-    Icon: IconType;
-    link: string;
-    title: string;
-    iconSize: string;
-};
 
 export default function ContactLink({ Icon, link, title, iconSize }: ContactLinkProps) {
     return (

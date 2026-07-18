@@ -1,7 +1,4 @@
-
-import * as React from "react"
-
-import { projects } from "@/data/projects";
+import { projects, projectsHeading } from "@/data/projects";
 import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card"
@@ -26,7 +23,7 @@ export default function Projects() {
     
     return (
         <AnimatedSection  {...sectionAnimation} id="projects" className="w-full flex flex-col justify-center items-center gap-20 min-h-[90vh]">
-            <h2>Projects</h2>
+            <h2>{projectsHeading}</h2>
             <Carousel className="max-w-[15rem] md:max-w-[23rem] flex">
                 <CarouselContent>
                     {projects.map((project, index) => (

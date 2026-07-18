@@ -1,13 +1,9 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GrClose } from "react-icons/gr";
+import type { HamburgerButtonProps } from "@/types/nav";
 
-type HamburgerButtonProps = {
-    isMenuOpen: boolean;
-    setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
 export default function HamburgerButton({isMenuOpen, setIsMenuOpen}: HamburgerButtonProps) {
-
     const buttonStyle = "h-8 w-8 hover:text-gray-400 active:text-gray-400";
 
     return (

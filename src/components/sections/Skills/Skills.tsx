@@ -1,7 +1,6 @@
 "use client";
 
-import * as React from "react"
-import { skills } from "@/data/skills";
+import { skills, skillsHeading } from "@/data/skills";
 import SkillsCard from "./SkillsCard";
 
 import {
@@ -32,7 +31,7 @@ export default function Skills() {
 
     return (
         <AnimatedSection  {...sectionAnimation} id="skills" className="w-full flex flex-col items-center justify-center gap-10 min-h-[90vh]">
-            <h2 className="pb-10">Skills</h2>
+            <h2 className="pb-10">{skillsHeading}</h2>
 
             {skills.map((category) => (
             <div
