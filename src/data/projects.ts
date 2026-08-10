@@ -2,6 +2,13 @@ import type { Project } from "@/types/projects";
 
 export const projects: Project[] = [
     { 
+        name: "IT Helpdesk",
+        stack: "Next.js, NestJS, TypeScript, Tailwind CSS, Prisma, PostgreSQL, Redis",
+        image: "/images/projects/it-helpdesk.png", 
+        githubLink: "https://github.com/Molnar-Zoltan/it-helpdesk/", 
+        liveLink: "https://it-helpdesk.zoltanmolnar.eu/" 
+    },
+    { 
         name: "Best Shop",
         stack: "JavaScript, SCSS",
         image: "/images/projects/best-shop.png", 
