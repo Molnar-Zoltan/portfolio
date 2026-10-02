@@ -22,7 +22,7 @@ function BadgeImage({ badge }: { badge: Badge }) {
 
 function BadgeItem({ badge }: { badge: Badge }) {
     return (
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 pt-5">
 
             {/* Desktop: name on hover / keyboard focus */}
             <div className="hidden md:block">
@@ -57,7 +57,7 @@ function BadgeItem({ badge }: { badge: Badge }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Verify ${badge.name} on Credly`}
-                className="text-sm font-semibold underline underline-offset-4 hover:text-white"
+                className="text-sm font-semibold hover:underline active:underline underline-offset-4 hover:text-white"
             >
                 Verify
             </a>
@@ -84,7 +84,7 @@ export default function BadgeGrid({ badges }: { badges: Badge[] }) {
 
     return (
         <>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 auto-rows-[13rem] gap-6 justify-items-center max-h-[27rem] overflow-y-auto pr-2">
                 {badges.map((badge) => (
                     <BadgeItem key={badge.id} badge={badge} />
                 ))}
@@ -93,7 +93,7 @@ export default function BadgeGrid({ badges }: { badges: Badge[] }) {
                 href={credlyProfileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold underline underline-offset-4"
+                className="font-semibold hover:underline active:underline underline-offset-4"
             >
                 View all badges on Credly
             </a>
