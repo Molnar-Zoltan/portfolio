@@ -7,10 +7,13 @@ import {
 
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { sectionAnimation } from "@/lib/animations";
-import CertifiacteList from "./CertificateList";
+import CertificationsTabs from "./CertificationsTabs";
+import { getBadges } from "@/lib/credly";
 import { aboutHeading, accordionItems } from "@/data/about";
 
-export default function About() {
+export default async function About() {
+    const badges = await getBadges();
+
     const accordionItemStyles: string = "lg:w-[50rem] sm:w-[25rem] w-[15rem] flex flex-col items-center";
     const accordionContentStyles: string = "flex flex-col gap-4 text-center";
     const accordionTriggerStyle: string = "text-[1.1rem] font-semibold";
@@ -30,7 +33,7 @@ export default function About() {
                     <AccordionItem key={item.value} value={item.value} className={accordionItemStyles}>
                         <AccordionTrigger className={accordionTriggerStyle}>{item.title}</AccordionTrigger>
                         <AccordionContent className={accordionContentStyles}>
-                            {item.isCertificateList ? <CertifiacteList /> : <p>{item.content}</p>}
+                            {item.isCertificateList ? <CertificationsTabs badges={badges} /> : <p>{item.content}</p>}
                         </AccordionContent>
                     </AccordionItem>
                 ))}
