@@ -1,12 +1,11 @@
 import { certificates } from "@/data/certificates";
 
+export default function CertificateList() {
 
-export default function CertifiacteList() {
-
-    certificates.sort((a, b) => b.date.getTime() - a.date.getTime());
+    const sortedCertificates = [...certificates].sort((a, b) => b.date.getTime() - a.date.getTime());
 
     return (
-        certificates.map((certificate, index) => (
+        sortedCertificates.map((certificate, index) => (
             <a href={certificate.href} key={index} target="_blank" rel="noopener noreferrer">
                 <p className="flex flex-col">
                     <span className="font-semibold">{certificate.name}</span>
